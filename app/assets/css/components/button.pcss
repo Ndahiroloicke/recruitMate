@@ -1,0 +1,58 @@
+.button {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl font-medium transition-all focus:outline-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
+
+    &.primary {
+        @apply disabled:text-icon-base-quaternary bg-background-surface-info-accent text-white  disabled:shadow-none hover:bg-border-action-info-hover focus:shadow-[0_0_0_2px_rgba(120,150,255,0.5)] disabled:bg-background-accent-blue-subtle disabled:focus:shadow-none disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+    &.destructive {
+        @apply disabled:text-background-button-destructive/30 bg-destructive text-white  disabled:shadow-none hover:bg-background-button-destructive-hover focus:shadow-[0_0_0_2px_rgba(255,178,178,0.6)] disabled:bg-background-button-destructive-disabled disabled:focus:shadow-none disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+   &.destructive-outlined {
+        @apply text-background-surface-destructive-accent border border-border-action-destructive bg-transparent hover:border-border-action-focus-destructive-light hover:bg-background-surface-destructive focus:border-border-action-focus-destructive-light focus:shadow-[0_0_0_2px_rgba(255,178,178,0.60)] disabled:text-border-action-destructive-disabled disabled:bg-transparent disabled:shadow-none disabled:border-border-action-destructive-disabled disabled:cursor-not-allowed disabled:pointer-events-none; disabled:border-border-action-destructive-disabled}
+
+    &.secondary {
+        @apply disabled:text-icon-base-quaternary border border-border-action-normal bg-background-button-secondary  disabled:shadow-none hover:bg-background-button-secondary-hover focus:shadow-[0_0_0_2px_rgba(120,150,255,0.5)] disabled:focus:shadow-none disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+    &.black {
+        @apply disabled:text-icon-base-quaternary bg-icon-base-static-dark text-white  disabled:shadow-none hover:bg-[#1e2129] focus:shadow-[0_0_0_2px_rgba(120,150,255,0.5)] disabled:bg-background-button-primary-disabled disabled:focus:shadow-none disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+    &.ghost { 
+        @apply bg-background-button-ghost disabled:text-icon-base-quaternary hover:bg-background-button-ghost-hover hover:text-accent-foreground focus:shadow-none disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+    &.tertiary {
+        @apply bg-background-button-tertiary disabled:text-icon-base-quaternary hover:bg-background-button-tertiary-hover focus:shadow-[0_0_0_2px_rgba(120,150,255,0.5)] disabled:bg-background-button-tertiary-disabled disabled:opacity-50 disabled:focus:shadow-none disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+    &.destructive-tertiary {
+        @apply text-background-surface-destructive-accent  bg-transparent bg-background-surface-destructive  border border-transparent hover:border-border-action-focus-destructive-light hover:bg-background-badge-red-accent/10 focus:border-border-action-focus-destructive-light focus:shadow-[0_0_0_2px_rgba(255,178,178,0.60)] disabled:text-border-action-destructive-disabled disabled:bg-transparent disabled:shadow-none disabled:border-border-action-destructive-disabled disabled:cursor-not-allowed disabled:pointer-events-none; disabled:border-border-action-destructive-disabled;
+    }
+
+    &.link {
+        @apply text-primary underline-offset-4 disabled:text-icon-base-quaternary hover:underline focus:shadow-none disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none;
+    }
+
+    &.xs {
+        @apply h-7 rounded-lg px-2 py-1 text-captionM tracking-normal leading-4;
+    }
+
+    &.sm {
+        @apply h-8 rounded-[10px] px-2.5 py-1.5 text-captionL tracking-tight leading-5;
+    }
+
+    &.md {
+        @apply h-9 rounded-xl px-3 py-2.5 text-captionL tracking-tight leading-5;
+    }
+
+    &.lg {
+        @apply h-10 rounded-xl px-4 py-3 text-bodyS tracking-tight leading-6;
+    }
+
+    &.icon {
+        @apply h-9 w-9;
+    }
+}

@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+.output
+dist
+../.env
+
+# Ensure that the .dockerignore file is not interfering
+.dockerignore

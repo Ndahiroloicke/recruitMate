@@ -1,0 +1,30 @@
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      args:
+        - SUPABASE_URL=${SUPABASE_URL}
+        - SUPABASE_KEY=${SUPABASE_KEY}
+        - POSTMARK_SERVER_API_TOKEN=${POSTMARK_SERVER_API_TOKEN}
+        - POSTMARK_FROM_EMAIL=${POSTMARK_FROM_EMAIL}
+        - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "3006:3000"
+    volumes:
+      - /app/node_modules
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=development
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - POSTMARK_SERVER_API_TOKEN=${POSTMARK_SERVER_API_TOKEN}
+      - POSTMARK_FROM_EMAIL=${POSTMARK_FROM_EMAIL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
